@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LabInventory | Sistem Inventaris Laboratorium</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="login-container" id="loginPage">
+    <div class="login-box">
+      <div class="brand-mark">LI</div>
+      <h1>LabInventory</h1>
+      <p class="login-subtitle">Laboratory Inventory & Borrowing Management</p>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input id="username" autocomplete="username" placeholder="Masukkan username" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" placeholder="Masukkan password" required>
+        <button class="primary-btn" type="submit">Masuk ke Aplikasi</button>
+      </form>
+      <p class="login-note">Demo lokal: admin / admin123 atau staff / staff123</p>
+      <p class="footer">Laboratory Inventory System © 2026</p>
+    </div>
+  </section>
+
+  <div id="app" class="app-shell hidden">
+    <aside class="sidebar">
+      <div class="sidebar-brand"><span class="brand-mark small">LI</span><div><b>LabInventory</b><small>LAB MANAGEMENT</small></div></div>
+      <div class="user-panel"><div class="avatar" id="userAvatar">A</div><div><b id="sidebarUser">Admin</b><small id="sidebarRole">Administrator</small></div></div>
+      <nav id="menuList"></nav>
+      <button class="logout-btn" id="logoutBtn">↪ Keluar</button>
+    </aside>
+    <main class="main-content">
+      <header class="topbar"><div><span class="eyebrow">LABORATORY MANAGEMENT</span><h1 id="pageTitle">Dashboard</h1></div><div class="top-user"><span id="todayLabel"></span><span class="avatar mini" id="topAvatar">A</span></div></header>
+      <div id="pageContent"></div>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
